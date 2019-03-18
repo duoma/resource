@@ -1,0 +1,48 @@
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "girlList": [
+            {
+                "title": "0",
+                "url": "http://img3.a0bi.com/upload/ttq/20160822/1471844048309.jpg"
+            },
+            {
+                "title": "1",
+                "url": "http://img3.a0bi.com/upload/ttq/20160822/1471844065735.jpg"
+            },
+            {
+                "title": "2",
+                "url": "http://img2.a0bi.com/upload/ttq/20160822/1471844041291.jpg"
+            },
+            {
+                "title": "3",
+                "url": "http://img2.a0bi.com/upload/ttq/20160822/1471844043310.jpg"
+            },
+            {
+                "title": "4",
+                "url": "http://img2.a0bi.com/upload/ttq/20160822/1471844058855.jpg"
+            },
+            {
+                "title": "5",
+                "url": "https://t1.hddhhn.com/uploads/tu/201902/593/1.jpg"
+            },
+            {
+                "title": "6",
+                "url": "http://t2.hddhhn.com/uploads/tu/201812/670/3.jpg"
+            },
+            {
+                "title": "7",
+                "url": "http://t2.hddhhn.com/uploads/tu/201408/051/3.jpg"
+            },
+            {
+                "title": "8",
+                "url": "http://t2.hddhhn.com/uploads/tu/201408/051/7.jpg"
+            },
+            {
+                "title": "9",
+                "url": "http://t2.hddhhn.com/uploads/tu/201812/540/1.jpg"
+            }
+        ]
+    }
+}
