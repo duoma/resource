@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>测试页面</title>
+</head>
+
+<body>
+
+    <h2>01、视频测试</h2>
+    <video id="id_video" poster="http://www.w3school.com.cn/i/eg_tulip.jpg" webkit-playsinline="true"
+        x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true"
+        width="100%" height="100%" preload="auto" controls="controls" autoplay style="background:#000; color:#FFF">
+
+        <source src="http://www.w3school.com.cn/example/html5/mov_bbb.mp4" type="video/mp4">
+        您的浏览器不支持HTML5视频
+    </video>
+
+    <div style="text-align:center">
+        <button onclick="playPause()">播放/暂停</button>
+        <button onclick="playLoad()">重播</button>
+        <br>
+        <hr>
+    </div>
+
+    <h2>02、文件上传</h2>
+    <input name="upload_image" type="file" accept="image/jpg,image/jpeg,image/png,image/gif">选择图片</input>
+    <br>
+    <br>
+    <input name="upload_video" type="file" accept="video/*">选择视频</input>
+    <br>
+    <hr>
+
+    <h2>03、JS与JAVA交互</h2>
+    <button onclick="startWeiXin()">微信支付</button>
+    <br>
+    <br>
+    <button onclick="startLogin()">登录界面</button>
+    <br>
+    <hr>
+
+    <h2>04、调用系统拨号应用</h2>
+    <a href="tel:0592-10000">客服电话：0592-10000</a>
+    <br>
+    <hr>
+
+    <h2>05、定位</h2>
+    <p id="id_location">点击这个按钮，获得您的坐标：</p>
+    <button onclick="getLocation()">定位</button>
+    <br>
+    <hr>
+
+    <h2>06、弹出Alert</h2>
+    <button onclick="runAlert()">弹出Alert()</button>
+    <br>
+    <hr>
+
+    <h2>07、识别当前浏览器UA信息</h2>
+    <table cellpadding=0 cellspacing=0 width="100%;">
+        <tr>
+            <td style="height:40px;text-align:center;font-size:16px;font-weight:bolder;">您的浏览器UA(userAgent)信息为：</td>
+        </tr>
+        <tr>
+            <td style="height:40px;text-align:center;font-size:16px;font-weight:bolder;color:red;">
+                <script language="JavaScript" type="text/javascript">
+                    document.write(navigator.userAgent);
+                </script>
+            </td>
+        </tr>
+        <td style="height:40px;text-align:center;font-size:16px;font-weight:bolder;">您的屏幕分辨率为：</td>
+        <tr>
+            <td style="height:40px;text-align:center;font-size:16px;font-weight:bolder;color:red;">
+                <script language="JavaScript" type="text/javascript">
+                    document.write(window.screen.width + "×" + window.screen.height);
+                </script>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="height:40px;text-align:center;font-size:16px;font-weight:bolder;color:red;">
+                <script language="JavaScript" type="text/javascript">
+                    document.write("浏览器分辨率是" + document.documentElement.clientWidth + "×" + document.documentElement.clientHeight);
+                    document.write("屏幕分辨率是" + window.screen.width + "×" + window.screen.height);
+                </script>
+            </td>
+        </tr>
+
+    </table>
+    <hr>
+
+    <h2>08、跳转页面</h2>
+    <a href="http://www.whhmk.cn/m/">文恵卡</a>
+    <a href="http://app.qqdd.com/wap/">敲敲打打</a>
+    <a href="https://ditu.amap.com/">高德地图</a>
+    <a href="https://map.baidu.com/">百度地图</a>
+    <a href="https://www.baidu.com/">百度</a>
+    <a href="https://h5.ele.me/msite/">饿了么</a>
+    <a href="https://m.indate.cn/">应达</a>
+    <br>
+    <br>
+    <a href="camera.html">摄像头</a>
+    <br>
+    <br>
+    <a href="bdapp://map/newsassistant">调起出行早知道页面</a>
+    <br>
+    <a
+        href="bdapp://map/show?center=40.057406655722,116.29644071728&zoom=11&traffic=on&bounds=37.8608310000,112.5963090000,42.1942670000,118.9491260000">展示地图</a>
+    <br>
+    <a
+        href="bdapp://map/marker?location=40.05740665572,116.2964407172&title=Marker&content=makeamarker&traffic=on">自定义打点</a>
+    <br>
+    <a href="bdapp://map?">展示地图图区</a>
+    <br>
+    <a href="bdapp://map/geocoder?src=openApiDemo&address=北京市海淀区上地信息路9号奎科科技大厦">地址解析</a>
+    <br>
+    <a href="bdapp://map/navi?query=故宫">驾车导航</a>
+    <br>
+    <a
+        href="bdapp://map/direction?region=beijing&origin=39.98871,116.43234&destination=name:西直门&mode=driving">驾车路线规划</a>
+    <hr>
+
+    <h2>09、页面刷新</h2>
+    <a href="javascript:location.reload()">刷新当前页面</a>
+    <button onclick="javascript:location.reload()">刷新当前页面</button>
+
+    <script>
+        // 视频
+        var myVid = document.getElementById("id_video");
+        function playPause() {
+            if (myVid.paused)
+                myVid.play();
+            else
+                myVid.pause();
+        }
+        function playLoad() {
+            myVid.load();
+        }
+
+        // html按钮点击触发，调用java方法
+        function startWeiXin() {
+            HostApp.startWeiXin('{"appid":"wx69b7be4b448f8037","noncestr":"gnnpwKo3JvVGSeGEq2TOmuht7I3vHhVf","package":"Sign=WXPay","partnerid":"1383526502","prepayid":"wx2017030714420978ba7da4c20698309207","timestamp":1488868929,"sign":"D1D16190F41A8A324A6607F1C4CAA6A7","out_trade_no":"HJ201703071442099496","type":"pay","pay_token":"cW84bWFpT21jTmpENjZBeWlRcHhqdz09","coupon_id":0,"order_code":"14888689253018"}');
+        }
+
+        function startLogin() {
+            HostApp.startLogin();
+        }
+
+        // 定位
+        var x = document.getElementById("id_location");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else {
+                x.innerHTML = "此浏览器不支持地理位置";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br />Longitude: " + position.coords.longitude;
+        }
+
+        // 弹窗
+        function runAlert(str) {
+            alert("弹窗测试");
+        }
+    </script>
+
+</body>
+
+</html>
