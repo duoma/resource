@@ -1,6 +1,7 @@
 {
     "url": "http://www.whhmk.cn/whk.apk",
     "versionCode": 2,
-    "updateMessage": "版本更新信息",
+    "version": "1.2.0",
+    "updateMessage": "主界面调整，新增加视频直播功能，新增即时通讯功能，新增热更新功能",
     "force": true
 }
